@@ -4,9 +4,8 @@ import { NativeBaseProvider, StatusBar } from 'native-base'
 import { useFonts } from "expo-font";
 import { Roboto_400Regular, Roboto_700Bold } from "@expo-google-fonts/roboto";
 import { THEME } from './src/styles/theme';
-import Home from './src/pages/Home';
 import { Text } from 'react-native';
-
+import Routes from './src/routes';
 
 export default function App() {
 
@@ -24,7 +23,7 @@ export default function App() {
         translucent={true}
       />
       {
-        fontsLoaded ? <Home /> :
+        fontsLoaded ? <Routes /> :
           <Text>
             Loading...
           </Text>
