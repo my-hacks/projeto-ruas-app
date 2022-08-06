@@ -1,10 +1,12 @@
 import { useNavigation } from '@react-navigation/native';
-import { VStack } from 'native-base';
-import React from 'react';
-import { View } from 'react-native';
+import { useScreenReaderEnabled, VStack } from 'native-base';
+import React, { useEffect, useState } from 'react';
+import { Text, View } from 'react-native';
 import Button from '../../components/Button';
+import api from '../../services/api';
 
 const Welcome: React.FC = () => {
+
 
   const navigation = useNavigation();
 
@@ -14,7 +16,7 @@ const Welcome: React.FC = () => {
     >
       <Button
         title="Home"
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate('Graph')}
       />
     </VStack>
 

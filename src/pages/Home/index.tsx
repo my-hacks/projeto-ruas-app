@@ -1,6 +1,6 @@
 import React from 'react';
-import { Heading, HStack, Image, useTheme, VStack } from 'native-base'
-import { Text, TouchableOpacity } from 'react-native';
+import { Heading, HStack, Image, Text, useTheme, VStack } from 'native-base'
+import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Home: React.FC = () => {
@@ -73,7 +73,9 @@ const Home: React.FC = () => {
                   <VStack
                     ml={5}
                   >
-                    <Text>
+                    <Text
+                      bold
+                    >
                       {propose.name}
                     </Text>
                     <Text>
