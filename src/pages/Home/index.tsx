@@ -38,7 +38,7 @@ const Home: React.FC = () => {
     <VStack
       flex={1}
       bg="gray.50"
-      p={10}
+      p={8}
     >
       <Heading
         color={colors.black}
