@@ -15,6 +15,7 @@ const RoutesTab = () => {
         options={{ headerShown: false }}
       />
       <Tab.Screen name="Profile" component={Events}
+        options={{ headerShown: false }}
       />
       <Tab.Screen name="Jobs" component={Jobs}
         options={{ headerShown: false }}

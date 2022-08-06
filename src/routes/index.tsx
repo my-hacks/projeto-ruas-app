@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from "../pages/Home";
 import Welcome from '../pages/Welcome';
 import RoutesTab from './tabs';
+import DetailsJob from '../pages/DetailsJob';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,11 +20,13 @@ const Routes = () => {
             headerShown: false
           }}
         />
+        <Stack.Screen name="DetailsJob" component={DetailsJob} />
         <Stack.Screen name="Home" component={RoutesTab}
           options={{
             headerShown: false
           }}
         />
+
       </Stack.Navigator>
     </NavigationContainer>
   )

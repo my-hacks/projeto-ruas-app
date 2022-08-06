@@ -1,11 +1,11 @@
 import React from 'react';
 import { Heading, HStack, Image, useTheme, VStack } from 'native-base'
-import { Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Home: React.FC = () => {
 
-  const { navigation } = useNavigation()
+  const navigation = useNavigation()
 
   const proposes = [
     {
@@ -54,31 +54,36 @@ const Home: React.FC = () => {
               mb={5}
               bg="white"
             >
-              <HStack
-                borderWidth={0.5}
-                borderColor={colors.black}
-                p={2}
-                alignItems="center"
-                borderRadius={10}
+              <TouchableOpacity
+                onPress={() => navigation.navigate('DetailsJob')}
               >
-                <Image
-                  source={propose.imgItem}
-                  alt="extra"
-                  height={50}
-                  width={50}
-                />
-                <VStack
-                  ml={5}
+                <HStack
+                  borderWidth={0.5}
+                  borderColor={colors.black}
+                  p={2}
+                  alignItems="center"
+                  borderRadius={10}
                 >
-                  <Text>
-                    {propose.name}
-                  </Text>
-                  <Text>
-                    {propose.address}
-                  </Text>
-                </VStack>
+                  <Image
+                    source={propose.imgItem}
+                    alt="extra"
+                    height={50}
+                    width={50}
+                  />
+                  <VStack
+                    ml={5}
+                  >
+                    <Text>
+                      {propose.name}
+                    </Text>
+                    <Text>
+                      {propose.address}
+                    </Text>
+                  </VStack>
 
-              </HStack>
+                </HStack>
+              </TouchableOpacity>
+
             </VStack>
           )
         })
