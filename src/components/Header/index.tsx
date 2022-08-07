@@ -17,7 +17,6 @@ const Header = () => {
       pb={5}
       px={6}
     >
-
       <HStack
         alignItems={'center'}
       >

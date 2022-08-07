@@ -4,12 +4,12 @@ import { FC } from "react";
 type Props = IButtonProps & {
   title: string;
   loading?: boolean;
+
 }
 
-const Button: FC<Props> = ({ title, loading = false, ...rest }) => {
+const Button: FC<Props> = ({ title, loading = false, height, ...rest }) => {
   return (
     <ButtonNativeBase
-      mt={8}
       height={14}
       fontSize="sm"
       rounded="sm"

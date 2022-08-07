@@ -3,6 +3,7 @@ import { Heading, HStack, Image, Text, useTheme, VStack } from 'native-base'
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
+import Button from '../../components/Button';
 
 const Home: React.FC = () => {
 
@@ -43,16 +44,25 @@ const Home: React.FC = () => {
         bg="gray.50"
         p={8}
       >
-
+        <HStack
+          justifyContent={'flex-end'}
+        >
+          <Button
+            title="Cadastrar Modarador"
+            bg={colors.gray[300]}
+            w="full"
+            height={0}
+          />
+        </HStack>
         <Heading
           color={colors.black}
           mt={5}
           mb={5}
         >
-
+          Visitas Recentes
         </Heading>
         {/* {
-        proposes.map(propose => {
+        proposes.map(propose = > {
           return (
             <VStack
               mb={5}
