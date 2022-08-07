@@ -1,15 +1,11 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../pages/Home';
 import Events from '../pages/Events';
 import Jobs from '../pages/Jobs';
-import { SignOut } from "phosphor-react-native";
-import { House, Person, Suitcase, UserRectangle, UsersFour, WaveTriangle } from 'phosphor-react-native'
+import { House, Suitcase, UsersFour, WaveTriangle } from 'phosphor-react-native'
 import { Icon, useTheme } from 'native-base';
 import Graph from '../pages/Graph';
-
-
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +26,6 @@ const RoutesTab = () => {
       />
       <Tab.Screen name="Vagas" component={Events}
         options={{
-          headerShown: false,
           tabBarIcon: () => (
             <Icon
               as={<Suitcase color={colors.gray[300]} />}
@@ -40,7 +35,8 @@ const RoutesTab = () => {
       />
       <Tab.Screen name="Pessoas" component={Jobs}
         options={{
-          headerShown: false, tabBarIcon: () => (
+          title: 'Acompanhamentos',
+          tabBarIcon: () => (
             <Icon
               as={<UsersFour color={colors.gray[300]} />}
             />
