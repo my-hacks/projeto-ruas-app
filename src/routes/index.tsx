@@ -36,7 +36,7 @@ const Routes = () => {
         />
         <Stack.Screen name="DetailsAcompanyPeople" component={DetailsAcompanyPeople}
           options={{
-            headerShown: false
+            title: 'Detalhes'
           }}
         />
         <Stack.Screen name="RegisterUser" component={RegisterUser}
@@ -44,6 +44,7 @@ const Routes = () => {
             title: 'Cadastro de Usuario',
           }}
         />
+
       </Stack.Navigator>
     </NavigationContainer>
   )

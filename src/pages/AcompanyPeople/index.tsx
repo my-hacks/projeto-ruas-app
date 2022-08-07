@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { Badge, Button, Center, Divider, Heading, HStack, PresenceTransition, ScrollView, Text, useTheme, VStack } from 'native-base';
 import React, { FC, useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
@@ -26,6 +27,12 @@ const AcompanyPeople: FC = () => {
 
   const { colors } = useTheme()
 
+  const navigation = useNavigation();
+
+  const navigateToDetails = (person) => {
+    navigation.navigate('DetailsAcompanyPeople', { person })
+  }
+
   return (
     <>
       <VStack
@@ -40,7 +47,9 @@ const AcompanyPeople: FC = () => {
         >
           {
             people.map(person => (
-              <TouchableOpacity key={person.id}>
+              <TouchableOpacity key={person.id}
+                onPress={() => navigateToDetails(person)}
+              >
                 <VStack
                   borderRadius={10}
                   borderWidth={1}
