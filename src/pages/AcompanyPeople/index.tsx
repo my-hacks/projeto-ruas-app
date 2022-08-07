@@ -38,7 +38,9 @@ const AcompanyPeople: FC = () => {
       <VStack
         p={8}
       >
-        <Heading>
+        <Heading
+          mb={8}
+        >
           Ultimas Pessoas Visitadas
         </Heading>
 
@@ -101,7 +103,6 @@ const AcompanyPeople: FC = () => {
                 </VStack>
               </TouchableOpacity>
             ))
-
           }
         </ScrollView>
 

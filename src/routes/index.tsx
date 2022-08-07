@@ -9,6 +9,7 @@ import Graph from '../pages/Graph';
 import RegisterUser from '../pages/RegisterUser';
 import AcompanyPeople from '../pages/AcompanyPeople';
 import DetailsAcompanyPeople from '../pages/AcompanyPeople/DetailsAcompanyPeople';
+import SugestJobs from '../pages/RegisterUser/SugestJobs';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,11 @@ const Routes = () => {
         <Stack.Screen name="RegisterUser" component={RegisterUser}
           options={{
             title: 'Cadastro de Usuario',
+          }}
+        />
+        <Stack.Screen name="SugestJobs" component={SugestJobs}
+          options={{
+            title: 'Vagas Sugeridas',
           }}
         />
 

@@ -1,8 +1,10 @@
-import { useRoute } from '@react-navigation/native';
-import { Divider, Heading, Text, VStack } from 'native-base';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { Divider, Heading, Text, useTheme, VStack } from 'native-base';
 import { LineChart, Grid } from 'react-native-svg-charts'
 
 import React, { FC, useState } from 'react';
+import Button from '../../../components/Button';
+import { Alert } from 'react-native';
 
 const DetailsAcompanyPeople: FC = () => {
 
@@ -27,14 +29,20 @@ const DetailsAcompanyPeople: FC = () => {
 
   const data = generateRandomNumbersForArray();
 
+  const { colors } = useTheme();
+
+  const navigation = useNavigation()
+
   return (
     <VStack
       p={8}
     >
-      <Text>
+      <Heading
+      >
         {person.name} {person.last_name}
-      </Text>
-      <Heading>
+      </Heading>
+      <Heading
+        fontSize={'lg'}>
         Histórico e Métricas
       </Heading>
       <VStack>
@@ -69,12 +77,39 @@ const DetailsAcompanyPeople: FC = () => {
           <Grid />
         </LineChart>
 
-        <Text>
+        <Text
+          color={'red'}
+          fontSize={15}
+        >
           Estás métricas mostram que é necessário um acompanhamento mais proximo por parte da assitente social
         </Text>
       </VStack>
 
+      <VStack
+        mt={10}
+      >
+        <Button
+          bg={colors.red[500]}
+          title="Agendar conversa com a Empresa"
+          fontSize={"lg"}
+          onPress={() => {
+            Alert.alert(
 
+              'Agendar uma conversa com a empresa ?!',
+              'Ela será nofiticada e logo entrará em contato',
+              [
+                { text: 'Não', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+                {
+                  text: 'Sim', onPress: () => {
+                    navigation.navigate('Home')
+                  }
+                },
+              ],
+
+            )
+          }}
+        />
+      </VStack>
     </VStack>
   );
 }

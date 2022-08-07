@@ -1,4 +1,4 @@
-import { HStack, Image, ScrollView, Text, useTheme, VStack } from 'native-base';
+import { Heading, HStack, Image, ScrollView, Text, useTheme, VStack } from 'native-base';
 import React, { useEffect } from 'react';
 import { Alert, View } from 'react-native';
 import Button from '../../components/Button';
@@ -30,6 +30,9 @@ const Jobs: React.FC = () => {
         flex={1}
         p={8}
       >
+        <Heading mb={10}>
+          Ultimas vagas cadastradas
+        </Heading>
         <ScrollView
           showsVerticalScrollIndicator={false}
         >
@@ -67,7 +70,7 @@ const Jobs: React.FC = () => {
                     onPress={() => {
                       Alert.alert(
                         'Aviso',
-                        'Confirmar entrevista com a empreasa!?',
+                        'Confirmar entrevista com a empresa!?',
                         [
                           { text: 'Não', onPress: () => { } },
                           { text: 'Sim', onPress: () => { } },

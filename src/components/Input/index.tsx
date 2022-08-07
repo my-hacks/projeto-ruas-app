@@ -8,7 +8,7 @@ const Input = ({ ...rest }: IInputProps) => {
       size="md"
       borderWidth={0}
       fontSize="md"
-      color="white"
+      color="#000"
       placeholderTextColor="gray.300"
       {...rest}
       _focus={{
