@@ -1,6 +1,6 @@
 import { HStack, Image, ScrollView, Text, useTheme, VStack } from 'native-base';
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
+import { Alert, View } from 'react-native';
 import Button from '../../components/Button';
 import api from '../../services/api';
 
@@ -64,6 +64,17 @@ const Jobs: React.FC = () => {
                 <Text>Descrição: {job.description}</Text>
                 <HStack justifyContent={"flex-end"}>
                   <Button
+                    onPress={() => {
+                      Alert.alert(
+                        'Aviso',
+                        'Confirmar entrevista com a empreasa!?',
+                        [
+                          { text: 'Não', onPress: () => { } },
+                          { text: 'Sim', onPress: () => { } },
+                        ],
+                        { cancelable: false }
+                      )
+                    }}
                     title="Agendar Entrevista"
                     w="50%"
                     mt={4}

@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { Image, useTheme, VStack } from 'native-base';
+import { Heading, Image, useTheme, VStack } from 'native-base';
 import React from 'react';
 import Button from '../../components/Button';
 
@@ -12,22 +12,30 @@ const Welcome: React.FC = () => {
   return (
     <VStack
       p={10}
+
     >
       <VStack
         alignItems={'center'}
-        height={'80%'}
+        height={'90%'}
       >
+
         <Image
-          source={require('../../assets/img/projeto_ruas.png')}
+          source={require('../../assets/img/logo.png')}
           alt="Projeto Ruas"
-          mt={20}
+          height={'100%'}
+          width={'100%'}
+          style={{
+            resizeMode: 'contain',
+          }}
         />
       </VStack>
-      <VStack>
+      <VStack
+      >
         <Button
+          height={'10%'}
           title="Entrar"
           onPress={() => navigation.navigate('Home')}
-          bg={colors.blue[700]}
+          bg={colors.violet[500]}
         />
       </VStack>
 
