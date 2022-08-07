@@ -33,7 +33,7 @@ const RoutesTab = () => {
           )
         }}
       />
-      <Tab.Screen name="Pessoas" component={Jobs}
+      {/* <Tab.Screen name="Pessoas" component={Jobs}
         options={{
           title: 'Acompanhamentos',
           tabBarIcon: () => (
@@ -42,7 +42,7 @@ const RoutesTab = () => {
             />
           )
         }}
-      />
+      /> */}
       <Tab.Screen name="Analises" component={Graph}
         options={{
           tabBarIcon: () => (
