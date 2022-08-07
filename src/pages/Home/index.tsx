@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Heading, HStack, Image, Text, useTheme, VStack } from 'native-base'
+import { Divider, Heading, HStack, Image, ScrollView, Text, useTheme, VStack } from 'native-base'
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
@@ -97,6 +97,13 @@ const Home: React.FC = () => {
         >
           Visitas Recentes
         </Heading>
+
+        <Divider my="2" />
+
+        <ScrollView showsHorizontalScrollIndicator={false}>
+          {/* //Lista de ultimas visitas */}
+        </ScrollView>
+
         {/* {
         proposes.map(propose = > {
           return (
