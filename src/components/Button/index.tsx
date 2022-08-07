@@ -1,4 +1,4 @@
-import { Button as ButtonNativeBase, IButtonProps, Heading, Spinner, useTheme } from 'native-base'
+import { Button as ButtonNativeBase, IButtonProps, Heading, Spinner } from 'native-base'
 import { FC } from "react";
 
 type Props = IButtonProps & {

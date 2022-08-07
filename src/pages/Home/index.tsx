@@ -1,11 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Heading, HStack, Image, Text, useTheme, VStack } from 'native-base'
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
+import api from '../../services/api';
 
 const Home: React.FC = () => {
+
+  // const createPerson = async () => {
+  //   try {
+  //     const response = await api.post('/ong/createPeople', {
+  //       name: 'Emerson',
+  //       age: 32
+  //     })
+  //     console.log(response.data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // const getPerson = async () => {
+  //   try {
+  //     const response = await api.get('/ong/listPeople')
+  //     console.log('PESSOAS NA LISTA', response.data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   createPerson()
+  // }, [])
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     getPerson()
+  //   }, 5000)
+  // }, [])
+
+
 
   const navigation = useNavigation()
 
@@ -33,9 +67,10 @@ const Home: React.FC = () => {
 
   const { colors } = useTheme();
 
-  const navigateToHome = () => {
-    navigation.navigate('Home')
+  const navigateToRegister = () => {
+    navigation.navigate('RegisterUser')
   }
+
   return (
     <>
       <Header />
@@ -52,6 +87,7 @@ const Home: React.FC = () => {
             bg={colors.gray[300]}
             w="full"
             height={0}
+            onPress={navigateToRegister}
           />
         </HStack>
         <Heading

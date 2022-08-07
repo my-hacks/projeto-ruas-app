@@ -6,6 +6,7 @@ import Welcome from '../pages/Welcome';
 import RoutesTab from './tabs';
 import DetailsJob from '../pages/DetailsJob';
 import Graph from '../pages/Graph';
+import RegisterUser from '../pages/RegisterUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,11 @@ const Routes = () => {
             headerShown: false
           }}
         />
-
+        <Stack.Screen name="RegisterUser" component={RegisterUser}
+          options={{
+            title: 'Cadastro de Usuario',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
