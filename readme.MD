@@ -1,5 +1,5 @@
 
-# RUAS - WEBAPP
+# RUAS - APP
 
 
 This application was built using expo-cli
