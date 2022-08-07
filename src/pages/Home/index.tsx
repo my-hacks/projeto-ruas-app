@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                     <Text>Sexo: {visit.gender === 'male' ? 'Homem' : 'Mulher'}</Text>
                   </HStack>
                   <HStack>
-                    <Text>Ultima Localicação - {visit.address}</Text>
+                    <Text>Ultima Localicação - {visit.location}</Text>
                   </HStack>
                   <Text>{visit.city}</Text>
                 </VStack>

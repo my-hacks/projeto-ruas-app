@@ -1,5 +1,5 @@
 import React from 'react';
-// import { LineChart, Grid } from 'react-native-svg-charts'
+import { LineChart, Grid } from 'react-native-svg-charts'
 import { PieChart } from 'react-native-svg-charts'
 
 
@@ -30,15 +30,14 @@ const Graph: React.FC = () => {
 
 
   return (
-    // <LineChart
-    //   style={{ height: 200 }}
-    //   data={data}
-    //   svg={{ stroke: 'rgb(134, 65, 244)' }}
-    //   contentInset={{ top: 20, bottom: 20 }}
-    // >
-    //   <Grid />
-    // </LineChart>
-    <PieChart style={{ height: 200 }} data={pieData} />
+    <LineChart
+      style={{ height: 200 }}
+      data={data}
+      svg={{ stroke: 'rgb(134, 65, 244)' }}
+      contentInset={{ top: 20, bottom: 20 }}
+    >
+      <Grid />
+    </LineChart>
   );
 }
 
