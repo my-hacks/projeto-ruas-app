@@ -6,6 +6,7 @@ import Jobs from '../pages/Jobs';
 import { House, Suitcase, UsersFour, WaveTriangle } from 'phosphor-react-native'
 import { Icon, useTheme } from 'native-base';
 import Graph from '../pages/Graph';
+import AcompanyPeople from '../pages/AcompanyPeople';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +34,7 @@ const RoutesTab = () => {
           )
         }}
       />
-      {/* <Tab.Screen name="Pessoas" component={Jobs}
+      <Tab.Screen name="Pessoas" component={AcompanyPeople}
         options={{
           title: 'Acompanhamentos',
           tabBarIcon: () => (
@@ -42,7 +43,7 @@ const RoutesTab = () => {
             />
           )
         }}
-      /> */}
+      />
       <Tab.Screen name="Analises" component={Graph}
         options={{
           tabBarIcon: () => (
