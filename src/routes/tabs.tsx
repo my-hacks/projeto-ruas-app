@@ -24,7 +24,7 @@ const RoutesTab = () => {
           )
         }}
       />
-      <Tab.Screen name="Vagas" component={Events}
+      <Tab.Screen name="Vagas" component={Jobs}
         options={{
           tabBarIcon: () => (
             <Icon
