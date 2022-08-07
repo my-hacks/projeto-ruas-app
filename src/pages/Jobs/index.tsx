@@ -27,7 +27,6 @@ const Jobs: React.FC = () => {
         flex={1}
         p={8}
       >
-
         {
           jobs.map(job => (
             <View key={job.id}>
@@ -39,7 +38,6 @@ const Jobs: React.FC = () => {
           ))
         }
       </VStack>
-
     </>
   )
 }

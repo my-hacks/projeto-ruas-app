@@ -3,8 +3,8 @@ import { View } from 'react-native';
 
 // import { Container } from './styles';
 
-const Events: React.FC = () => {
+const DetailsAcompanyPeople: React.FC = () => {
   return <View />;
 }
 
-export default Events;
+export default DetailsAcompanyPeople;

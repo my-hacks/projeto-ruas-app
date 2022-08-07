@@ -7,6 +7,8 @@ import RoutesTab from './tabs';
 import DetailsJob from '../pages/DetailsJob';
 import Graph from '../pages/Graph';
 import RegisterUser from '../pages/RegisterUser';
+import AcompanyPeople from '../pages/AcompanyPeople';
+import DetailsAcompanyPeople from '../pages/AcompanyPeople/DetailsAcompanyPeople';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +25,16 @@ const Routes = () => {
         <Stack.Screen name="DetailsJob" component={DetailsJob} />
         <Stack.Screen name="Graph" component={Graph} />
         <Stack.Screen name="Home" component={RoutesTab}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name="AcompanyPeople" component={AcompanyPeople}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name="DetailsAcompanyPeople" component={DetailsAcompanyPeople}
           options={{
             headerShown: false
           }}
