@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../pages/Home';
-import Events from '../pages/Events';
+import Events from '../pages/AcompanyPeople';
 import Jobs from '../pages/Jobs';
 import { House, Suitcase, UsersFour, WaveTriangle } from 'phosphor-react-native'
 import { Icon, useTheme } from 'native-base';
