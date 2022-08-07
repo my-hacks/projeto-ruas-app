@@ -1,45 +1,12 @@
-import React, { useEffect } from 'react';
-import { Divider, Heading, HStack, Image, ScrollView, Text, useTheme, VStack } from 'native-base'
-import { TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Divider, Heading, HStack, ScrollView, useTheme, VStack } from 'native-base'
+
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
-import Button from '../../components/Button';
-import api from '../../services/api';
+
+import Popover from './Popover';
 
 const Home: React.FC = () => {
-
-  // const createPerson = async () => {
-  //   try {
-  //     const response = await api.post('/ong/createPeople', {
-  //       name: 'Emerson',
-  //       age: 32
-  //     })
-  //     console.log(response.data)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
-  // const getPerson = async () => {
-  //   try {
-  //     const response = await api.get('/ong/listPeople')
-  //     console.log('PESSOAS NA LISTA', response.data)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   createPerson()
-  // }, [])
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     getPerson()
-  //   }, 5000)
-  // }, [])
-
-
 
   const navigation = useNavigation()
 
@@ -67,10 +34,6 @@ const Home: React.FC = () => {
 
   const { colors } = useTheme();
 
-  const navigateToRegister = () => {
-    navigation.navigate('RegisterUser')
-  }
-
   return (
     <>
       <Header />
@@ -79,20 +42,9 @@ const Home: React.FC = () => {
         bg="gray.50"
         p={8}
       >
-        <HStack
-          justifyContent={'flex-end'}
-        >
-          <Button
-            title="Cadastrar Modarador"
-            bg={colors.gray[300]}
-            w="full"
-            height={0}
-            onPress={navigateToRegister}
-          />
-        </HStack>
         <Heading
           color={colors.black}
-          mt={5}
+          // mt={5}
           mb={5}
         >
           Visitas Recentes
@@ -147,8 +99,13 @@ const Home: React.FC = () => {
           )
         })
       } */}
-
+        <HStack
+          justifyContent="flex-end"
+        >
+          <Popover />
+        </HStack>
       </VStack>
+
     </>
 
   )
