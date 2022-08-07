@@ -1,8 +1,6 @@
 import { Box, Center, HStack, Icon, IconButton, Stagger, useDisclose } from 'native-base';
 import React from 'react';
-import { Plus } from 'phosphor-react-native'
-
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Plus, UserCirclePlus } from 'phosphor-react-native'
 import { useNavigation } from '@react-navigation/native';
 
 const Popover = () => {
@@ -46,17 +44,14 @@ const Popover = () => {
           onPress={() => navigation.navigate('RegisterUser')}
           mt={40}
           variant="solid"
-          bg="red.500"
-          // colorScheme="red"
-          borderRadius="full"
-          icon={<Icon as={MaterialIcons}
-            size="6"
-            name="people"
+          bg="pink.400"
 
+          borderRadius="full"
+          icon={<Icon as={UserCirclePlus}
+            size="10"
+            name="people"
             color="warmGray.50"
           />} />
-
-
       </Stagger>
     </Box>
     <HStack alignItems="center">
