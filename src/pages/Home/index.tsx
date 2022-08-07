@@ -2,6 +2,7 @@ import React from 'react';
 import { Heading, HStack, Image, Text, useTheme, VStack } from 'native-base'
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Header from '../../components/Header';
 
 const Home: React.FC = () => {
 
@@ -35,19 +36,22 @@ const Home: React.FC = () => {
     navigation.navigate('Home')
   }
   return (
-    <VStack
-      flex={1}
-      bg="gray.50"
-      p={8}
-    >
-      <Heading
-        color={colors.black}
-        mt={5}
-        mb={5}
+    <>
+      <Header />
+      <VStack
+        flex={1}
+        bg="gray.50"
+        p={8}
       >
-        Ultimas Vagas Adicionadas
-      </Heading>
-      {
+
+        <Heading
+          color={colors.black}
+          mt={5}
+          mb={5}
+        >
+
+        </Heading>
+        {/* {
         proposes.map(propose => {
           return (
             <VStack
@@ -89,9 +93,11 @@ const Home: React.FC = () => {
             </VStack>
           )
         })
-      }
+      } */}
 
-    </VStack>
+      </VStack>
+    </>
+
   )
 }
 
